@@ -7,7 +7,7 @@ $arrFiles = array();
 $arrFiles = glob("$themeDir/*.css");
 
 $neko_version = exec("opkg list-installed | grep luci-app-neko | cut -d ' - ' -f3");
-$neko_latest = exec("curl -m 5 -f -s https://raw.githubusercontent.com/nosignals/openwrt-neko/main/luci-app-neko/Makefile | grep PKG_VERSION: | cut -d= -f2");
+$neko_latest = exec("curl -m 5 -f -s https://raw.githubusercontent.com/Dirgha80/openwrt-neko/main/luci-app-neko/Makefile | grep PKG_VERSION: | cut -d= -f2");
 $stat = 0;
 if ($neko_version == $neko_latest){
     $stat = 0;
